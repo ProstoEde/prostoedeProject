@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class projectController {
     
     private final UsersService usersService;
-    
+        
     @RequestMapping(value = "/get", method = RequestMethod.POST)
     public @ResponseBody Users getUsers(@RequestBody Base test){
     
@@ -46,7 +46,7 @@ public class projectController {
     @RequestMapping(value = "/start", method = RequestMethod.GET)
     public ModelAndView getStart(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("home");
+        modelAndView.setViewName("index");
         return modelAndView;
     }
     

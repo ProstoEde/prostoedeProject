@@ -30,7 +30,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-	registry.addViewController("/").setViewName("/index.html");
+	registry.addViewController("/").setViewName("home");
     }
 
     @Override
@@ -42,16 +42,16 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public ConversionServiceFactoryBean conversionService() {
 	return new ConversionServiceFactoryBean();
     }
-    
+
     @Bean
-   public InternalResourceViewResolver resolver() {
-      InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-      resolver.setViewClass(JstlView.class);
-      resolver.setPrefix("/WEB-INF/views/");
-      resolver.setSuffix(".jsp");
-      return resolver;
-   }
-    
-    
+    public InternalResourceViewResolver resolver() {
+	InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+	resolver.setViewClass(JstlView.class);
+	resolver.setPrefix("/WEB-INF/views/");
+	resolver.setSuffix(".jsp");
+	return resolver;
+    }
+
+
 
 }
